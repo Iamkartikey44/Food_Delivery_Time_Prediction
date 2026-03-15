@@ -39,9 +39,9 @@ stages:
     - Train.Random_Forest
     - Train.LightGBM
     outs:
-    - models/model.joblib
-    - models/power_transformer.joblib
-    - models/stacking_regressor.joblib
+    - model/model.joblib
+    - model/power_transformer.joblib
+    - model/stacking_regressor.joblib
   
   model_evaluation:
     cmd: python src/models/model_evaluation.py
@@ -49,7 +49,7 @@ stages:
     - src/models/model_evaluation.py
     - data/processed/train_trans.csv
     - data/processed/test_trans.csv
-    - models/model.joblib
+    - model/model.joblib
     outs:
     - run_information.json
   

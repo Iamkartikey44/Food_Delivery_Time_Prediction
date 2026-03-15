@@ -128,7 +128,7 @@ if __name__ == "__main__":
     # model name
     model_filename = "model.joblib"
     # directory to save model
-    model_save_dir = root_path / "models"
+    model_save_dir = root_path / "model"
     model_save_dir.mkdir(exist_ok=True)
     
     # extract the model from wrapper
