@@ -30,10 +30,10 @@ stages:
     - data/processed/test_trans.csv
     - models/preprocessor.joblib
   
-  train:
-    cmd: python src/models/train.py
+  model_building:
+    cmd: python src/models/model_building.py
     deps:
-    - src/models/train.py
+    - src/models/model_building.py
     - data/processed/train_trans.csv
     params:
     - Train.Random_Forest
@@ -43,10 +43,10 @@ stages:
     - models/power_transformer.joblib
     - models/stacking_regressor.joblib
   
-  evaluation:
-    cmd: python src/models/evaluation.py
+  model_evaluation:
+    cmd: python src/models/model_evaluation.py
     deps:
-    - src/models/evaluation.py
+    - src/models/model_evaluation.py
     - data/processed/train_trans.csv
     - data/processed/test_trans.csv
     - models/model.joblib

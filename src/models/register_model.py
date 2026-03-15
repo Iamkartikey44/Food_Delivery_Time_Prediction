@@ -22,7 +22,7 @@ formatter = logging.Formatter(fmt='%(asctime)s - %(name)s - %(levelname)s - %(me
 handler.setFormatter(formatter)
 
 dagshub.init(repo_owner='Iamkartikey44', repo_name='Food_Delivery_Time_Prediction', mlflow=True)
-mlflow.set_tracking_uri("https://dagshub.com/Iamkartikey44/TheFoodRoasterizer.mlflow")
+mlflow.set_tracking_uri("https://dagshub.com/Iamkartikey44/Food_Delivery_Time_Prediction.mlflow")
 
 
 def load_model_information(file_path):

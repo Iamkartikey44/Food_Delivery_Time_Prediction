@@ -56,7 +56,7 @@ if __name__ == "__main__":
     # save path for train and test
     save_train_path = save_data_dir / train_filename
     save_test_path = save_data_dir / test_filename
-    params_file_path = root_path / "paramms.yaml"
+    params_file_path = root_path / "params.yaml"
     # load the cleaned data
     df = load_data(data_path)
     logger.info("Data Loaded Successfully")
@@ -74,4 +74,4 @@ if __name__ == "__main__":
     filename_list = [train_filename,test_filename]
     for filename , path, data in zip(filename_list, data_paths, data_subsets):
         save_data(data=data, save_path=path)
-        logger.info(f"{filename.replace(".csv","")} data saved to location")
+        logger.info(f"{filename.replace('.csv','')} data saved to location")

@@ -5,7 +5,7 @@ from mlflow import MlflowClient
 
 
 dagshub.init(repo_owner='Iamkartikey44', repo_name='Food_Delivery_Time_Prediction', mlflow=True)
-mlflow.set_tracking_uri("https://dagshub.com/Iamkartikey44/TheFoodRoasterizer.mlflow")
+mlflow.set_tracking_uri("https://dagshub.com/Iamkartikey44/Food_Delivery_Time_Prediction.mlflow")
 
 def load_model_information(file_path):
     with open(file_path) as f:

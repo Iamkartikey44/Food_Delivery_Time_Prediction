@@ -1,0 +1,4 @@
+[core]
+    remote = origin
+['remote "origin"']
+    url = https://dagshub.com/Iamkartikey44/Food_Delivery_Time_Prediction.dvc

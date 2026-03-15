@@ -1,0 +1,5 @@
+{
+    "run_id": "060e37b0ea1342638228eb0f3e97f050",
+    "artifact_path": "mlflow-artifacts:/b2df93d8335d4e3cbf9351713489dbbc/060e37b0ea1342638228eb0f3e97f050/artifacts",
+    "model_name": "delivery_time_pred_model"
+}
