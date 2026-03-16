@@ -9,7 +9,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.metrics import mean_absolute_error,r2_score
 
 dagshub.init(repo_owner='Iamkartikey44', repo_name='Food_Delivery_Time_Prediction', mlflow=True)
-mlflow.set_tracking_uri("https://dagshub.com/Iamkartikey44/TheFoodRoasterizer.mlflow")
+mlflow.set_tracking_uri("https://dagshub.com/Iamkartikey44/Food_Delivery_Time_Prediction.mlflow")
 
 mlflow.set_experiment("DVC Pipeline")
 
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     root_path = Path(__file__).parent.parent.parent
     train_data_path = root_path / "data" / "processed" / "train_trans.csv"
     test_data_path = root_path / "data" / "processed" / "test_trans.csv"
-    model_path = root_path / "models" / "model.joblib"
+    model_path = root_path / "model" / "model.joblib"
 
     train_data = load_data(train_data_path)
     logger.info("Train data loaded successfully")
@@ -118,8 +118,8 @@ if __name__ == "__main__":
 
         mlflow.sklearn.log_model(model,"delivery_time_pred_model",signature=model_signature)
 
-        mlflow.log_artifact(root_path / "models" / "stacking_regressor.joblib")
-        mlflow.log_artifact(root_path / "models" / "power_transformer.joblib")
+        mlflow.log_artifact(root_path / "model" / "stacking_regressor.joblib")
+        mlflow.log_artifact(root_path / "model" / "power_transformer.joblib")
 
         artifact_uri = mlflow.get_artifact_uri()
 

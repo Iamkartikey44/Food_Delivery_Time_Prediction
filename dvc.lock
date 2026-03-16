@@ -53,8 +53,8 @@ stages:
       size: 3604437
     - path: src/features/data_preprocessing.py
       hash: md5
-      md5: ff2771547c8711c98fc4f337b15d1f22
-      size: 5828
+      md5: 9b6a2f40fd380d631efa25d7ebadffbf
+      size: 5827
     outs:
     - path: data/processed/test_trans.csv
       hash: md5
@@ -64,7 +64,7 @@ stages:
       hash: md5
       md5: 0d2f47751596e1c0f6bffbf7bb582a07
       size: 4329420
-    - path: models/preprocessor.joblib
+    - path: model/preprocessor.joblib
       hash: md5
       md5: 694ff90adef11ab59cf9d56a31c5480b
       size: 7259
@@ -77,8 +77,8 @@ stages:
       size: 4329420
     - path: src/models/model_building.py
       hash: md5
-      md5: 6a6ef20760dc83a8b861c48b26c926f7
-      size: 4902
+      md5: 18f4e36202f46f6b099c04f4305d6570
+      size: 4901
     params:
       params.yaml:
         Train.LightGBM:
@@ -101,18 +101,18 @@ stages:
           verbose: 1
           n_jobs: -1
     outs:
-    - path: models/model.joblib
+    - path: model/model.joblib
       hash: md5
-      md5: b57f769a0a866a44d2c30e717c8ffa49
-      size: 157967304
-    - path: models/power_transformer.joblib
+      md5: 6e16073205999afa2a234b6f927cc666
+      size: 157689528
+    - path: model/power_transformer.joblib
       hash: md5
       md5: 10cd568333241a57a6c5a0beb08de0bf
       size: 805
-    - path: models/stacking_regressor.joblib
+    - path: model/stacking_regressor.joblib
       hash: md5
-      md5: 5c46edb63865928d1f187f5ce21d4708
-      size: 157955722
+      md5: 19341d3f875e55423bcf9bd77a129151
+      size: 157677946
   model_evaluation:
     cmd: python src/models/model_evaluation.py
     deps:
@@ -124,16 +124,16 @@ stages:
       hash: md5
       md5: 0d2f47751596e1c0f6bffbf7bb582a07
       size: 4329420
-    - path: models/model.joblib
+    - path: model/model.joblib
       hash: md5
-      md5: b57f769a0a866a44d2c30e717c8ffa49
-      size: 157967304
+      md5: 6e16073205999afa2a234b6f927cc666
+      size: 157689528
     - path: src/models/model_evaluation.py
       hash: md5
-      md5: de3e214fefc4ea961daed9114543bb60
-      size: 4696
+      md5: 6c89e4d6beb9b8ab6b71c5b8c4974a3b
+      size: 4704
     outs:
     - path: run_information.json
       hash: md5
-      md5: f9b0c2ff76f0fd8c974164a919d31948
+      md5: ea5a4eba54a17ab1eac5092f814e08f9
       size: 220
